@@ -1,0 +1,25 @@
+package java_code;
+
+public class check_arr_sort_recu
+{
+	static boolean search_sort(int[]arr,int index)
+	{
+		if(index==arr.length-1)
+		{
+			return true;
+		}
+		if(arr[index]>arr[index+1])
+		{
+			return false;
+		}
+		return arr[index]<arr[index+1] && search_sort(arr,index+1);
+		
+	}
+	public static void main(String args[])
+	{
+		int[]arr= {9,9,3,4,5};
+		boolean ans=search_sort(arr,0);
+		System.out.println(ans);
+	}
+
+}
